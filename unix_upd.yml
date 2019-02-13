@@ -1,0 +1,8 @@
+- hosts: Web
+  tasks:
+    - copy:
+          src: /home/ansible/scripts/upg.sh
+          dest: /home/ansible/upg.sh
+
+    - name: Execute the script
+      command: sh /home/ansible/upg.sh

@@ -1,0 +1,5 @@
+- hosts: Web
+  tasks:
+   - name: Install httpd 
+     apt: pkg=httpd  state=latest update_cache=true
+     notify:
