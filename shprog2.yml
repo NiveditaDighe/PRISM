@@ -1,0 +1,8 @@
+- hosts: Web
+  tasks:
+    - copy:
+          src: /home/ansible/scripts/u1.sh
+          dest: /home/ansible/u1.sh
+
+    - name: Execute the script
+      command: sh /home/ansible/u1.sh

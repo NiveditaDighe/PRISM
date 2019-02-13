@@ -1,0 +1,75 @@
+2019-02-04 09:29:09,698 p=9277 u=ansible |  Using /etc/ansible/ansible.cfg as config file
+2019-02-04 09:29:09,708 p=9277 u=ansible |  /etc/ansible/hosts did not meet host_list requirements, check plugin documentation if this is unexpected
+2019-02-04 09:29:09,709 p=9277 u=ansible |  /etc/ansible/hosts did not meet script requirements, check plugin documentation if this is unexpected
+2019-02-04 09:29:10,016 p=9277 u=ansible |  PLAY [Web] *********************************************************************
+2019-02-04 09:29:10,023 p=9277 u=ansible |  TASK [Gathering Facts] *********************************************************
+2019-02-04 09:29:13,143 p=9277 u=ansible |  ok: [172.31.23.83]
+2019-02-04 09:29:13,294 p=9277 u=ansible |  ok: [172.31.44.62]
+2019-02-04 09:29:13,388 p=9277 u=ansible |  TASK [copy] ********************************************************************
+2019-02-04 09:29:14,070 p=9277 u=ansible |  ok: [172.31.23.83] => {"changed": false, "checksum": "8c87b5362903d92fba5fff5af432c83c2c12c797", "dest": "/home/ansible/upg.sh", "gid": 1002, "group": "ansible", "mode": "0664", "owner": "ansible", "path": "/home/ansible/upg.sh", "size": 41, "state": "file", "uid": 1002}
+2019-02-04 09:29:14,074 p=9277 u=ansible |  ok: [172.31.44.62] => {"changed": false, "checksum": "8c87b5362903d92fba5fff5af432c83c2c12c797", "dest": "/home/ansible/upg.sh", "gid": 1002, "group": "ansible", "mode": "0664", "owner": "ansible", "path": "/home/ansible/upg.sh", "size": 41, "state": "file", "uid": 1002}
+2019-02-04 09:29:14,170 p=9277 u=ansible |  TASK [Execute the script] ******************************************************
+2019-02-04 09:30:47,469 p=9277 u=ansible |   [ERROR]: User interrupted execution
+
+2019-02-04 09:38:49,122 p=9360 u=ansible |  172.31.23.83 | CHANGED | rc=0 >>
+ii  linux-image-4.15.0-1021-aws    4.15.0-1021.21                    amd64        Linux kernel image for version 4.15.0 on 64 bit x86 SMP
+ii  linux-image-4.15.0-1029-aws    4.15.0-1029.30                    amd64        Linux kernel image for version 4.15.0 on 64 bit x86 SMP
+ii  linux-image-4.15.0-1031-aws    4.15.0-1031.33                    amd64        Linux kernel image for version 4.15.0 on 64 bit x86 SMP
+ii  linux-image-aws                4.15.0.1031.30                    amd64        Linux kernel image for Amazon Web Services (AWS) systems.
+
+2019-02-04 09:38:50,067 p=9360 u=ansible |  172.31.44.62 | CHANGED | rc=0 >>
+ii  linux-image-4.15.0-1021-aws           4.15.0-1021.21                    amd64        Linux kernel image for version 4.15.0 on 64 bit x86 SMP
+ii  linux-image-4.15.0-1029-aws           4.15.0-1029.30                    amd64        Linux kernel image for version 4.15.0 on 64 bit x86 SMP
+ii  linux-image-4.15.0-1031-aws           4.15.0-1031.33                    amd64        Linux kernel image for version 4.15.0 on 64 bit x86 SMP
+ii  linux-image-4.15.0-45-generic         4.15.0-45.48                      amd64        Signed kernel image generic
+ii  linux-image-aws                       4.15.0.1031.30                    amd64        Linux kernel image for Amazon Web Services (AWS) systems.
+ii  linux-image-generic                   4.15.0.45.47                      amd64        Generic Linux kernel image
+
+2019-02-04 09:40:45,914 p=9393 u=ansible |  172.31.23.83 | CHANGED | rc=0 >>
+Linux 4.15.0-1031-aws x86_64
+
+2019-02-04 09:40:45,916 p=9393 u=ansible |  172.31.44.62 | CHANGED | rc=0 >>
+Linux 4.15.0-1031-aws x86_64
+
+2019-02-04 09:45:28,990 p=9427 u=ansible |   [WARNING]: Consider using the apt module rather than running apt-get.  If you need to use command because apt is insufficient you can add warn=False to this command
+task or set command_warnings=False in ansible.cfg to get rid of this message.
+
+2019-02-04 09:45:28,991 p=9427 u=ansible |  172.31.44.62 | FAILED | rc=100 >>
+E: Could not open lock file /var/lib/dpkg/lock-frontend - open (13: Permission denied)
+E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), are you root?non-zero return code
+
+2019-02-04 09:45:28,993 p=9427 u=ansible |  172.31.23.83 | FAILED | rc=100 >>
+E: Could not open lock file /var/lib/dpkg/lock-frontend - open (13: Permission denied)
+E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), are you root?non-zero return code
+
+2019-02-04 09:56:10,238 p=9464 u=ansible |  Using /etc/ansible/ansible.cfg as config file
+2019-02-04 09:56:10,247 p=9464 u=ansible |  /etc/ansible/hosts did not meet host_list requirements, check plugin documentation if this is unexpected
+2019-02-04 09:56:10,248 p=9464 u=ansible |  /etc/ansible/hosts did not meet script requirements, check plugin documentation if this is unexpected
+2019-02-04 09:56:10,281 p=9464 u=ansible |  ERROR! Syntax Error while loading YAML.
+  did not find expected '-' indicator
+
+The error appears to have been in '/home/ansible/scripts/check_file_exists.yml': line 3, column 1, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  tasks:
+tasks:
+^ here
+
+2019-02-04 09:57:46,477 p=9469 u=ansible |  Using /etc/ansible/ansible.cfg as config file
+2019-02-04 09:57:46,487 p=9469 u=ansible |  /etc/ansible/hosts did not meet host_list requirements, check plugin documentation if this is unexpected
+2019-02-04 09:57:46,487 p=9469 u=ansible |  /etc/ansible/hosts did not meet script requirements, check plugin documentation if this is unexpected
+2019-02-04 09:57:46,689 p=9469 u=ansible |  PLAY [Web] *************************************************************************************************************************************************************
+2019-02-04 09:57:46,697 p=9469 u=ansible |  TASK [Gathering Facts] *************************************************************************************************************************************************
+2019-02-04 09:57:49,445 p=9469 u=ansible |  ok: [172.31.23.83]
+2019-02-04 09:57:50,351 p=9469 u=ansible |  ok: [172.31.44.62]
+2019-02-04 09:57:50,446 p=9469 u=ansible |  TASK [Check that the somefile.conf exists] *****************************************************************************************************************************
+2019-02-04 09:57:50,866 p=9469 u=ansible |  ok: [172.31.23.83] => {"changed": false, "stat": {"exists": false}}
+2019-02-04 09:57:50,870 p=9469 u=ansible |  ok: [172.31.44.62] => {"changed": false, "stat": {"exists": false}}
+2019-02-04 09:57:50,967 p=9469 u=ansible |  TASK [Create the file, if it doesnt exist already] *********************************************************************************************************************
+2019-02-04 09:57:51,420 p=9469 u=ansible |  changed: [172.31.23.83] => {"changed": true, "dest": "/home/ansible/file.txt", "gid": 1002, "group": "ansible", "mode": "0664", "owner": "ansible", "size": 0, "state": "file", "uid": 1002}
+2019-02-04 09:57:51,425 p=9469 u=ansible |  changed: [172.31.44.62] => {"changed": true, "dest": "/home/ansible/file.txt", "gid": 1002, "group": "ansible", "mode": "0664", "owner": "ansible", "size": 0, "state": "file", "uid": 1002}
+2019-02-04 09:57:51,428 p=9469 u=ansible |  PLAY RECAP *************************************************************************************************************************************************************
+2019-02-04 09:57:51,428 p=9469 u=ansible |  172.31.23.83               : ok=3    changed=1    unreachable=0    failed=0   
+2019-02-04 09:57:51,428 p=9469 u=ansible |  172.31.44.62               : ok=3    changed=1    unreachable=0    failed=0   

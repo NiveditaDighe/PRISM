@@ -1,0 +1,11 @@
+- hosts: Web
+  tasks:
+  - name: Ansible shell module output
+    shell: echo $PWD
+    register: command_result
+
+  - name: Ansible shell register result
+    debug: msg="{{ command_result }}"
+
+  - name: Return only the shell standard output
+    debug: msg="{{ command_result.stdout }}"
