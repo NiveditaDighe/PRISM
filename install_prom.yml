@@ -1,0 +1,8 @@
+- hosts: Web
+  tasks:
+    - copy:
+          src: /home/ansible/scripts/installprom.sh
+          dest: /home/prometheus/installprom.sh
+
+    - name: Execute the script
+      command: sh /home/prometheus/installprom.sh

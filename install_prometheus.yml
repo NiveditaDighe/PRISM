@@ -1,0 +1,6 @@
+- hosts: Web
+  tasks: 
+- name: Install prometheus
+    src: "https://github.com/prometheus/prometheus/releases/download/v{{ version }}/prometheus-{{ version }}.linux-amd64.tar.gz"
+    dest: /tmp/
+    remote_src: yes

@@ -1,0 +1,9 @@
+- hosts: Web
+  tasks:
+  - name: create a login user
+    user:
+        name: prometheus 
+        createhome: yes
+        state: present
+        shell: /bin/bash       # Defaults to /bin/bash
+        system: no             # Defaults to no

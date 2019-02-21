@@ -1,0 +1,4 @@
+- hosts: Web
+  tasks:
+  - name: ensure prometheus is running (and enable it at boot)
+    service: name=prometheus state=started enabled=yes 
