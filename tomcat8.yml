@@ -1,5 +1,0 @@
-- hosts: Web
-  tasks:
-   - name: Install tomcat8 
-     apt: pkg=tomcat8  state=latest update_cache=true
-     notify:

@@ -1,4 +1,0 @@
-- hosts: Web
-  tasks:
-    - name: Execute the script
-      script: /home/ansible/scripts/u1.sh

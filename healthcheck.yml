@@ -1,8 +1,0 @@
-- hosts: Web
-  tasks:
-    - copy:
-          src: /home/ansible/scripts/healthcheck.sh
-          dest: /home/ansible/healthcheck.sh
-
-    - name: Execute the script
-      command: sh /home/ansible/healthcheck.sh

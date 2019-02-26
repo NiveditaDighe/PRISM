@@ -1,5 +1,0 @@
-- hosts: Web
-  tasks: 
-  name: Install prometheus  node_exporter
-  apt: pkg=prometheus-node-exporter state=installed update_cache=true
-
