@@ -1,0 +1,10 @@
+- hosts: Web
+  vars:
+    http_port: 80
+    max_clients: 200
+  remote_user: ansible
+  tasks:
+  - name: ensure apache2 is at the latest version
+    yum: name=apache2 state=latest
+  - name: ensure apache2  is running (and enable it at boot)
+    service: name=apache2 state=started enabled=yes

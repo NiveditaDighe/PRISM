@@ -1,0 +1,8 @@
+- hosts: Web
+  tasks:
+    - copy:
+          src: /home/ansible/scripts/st.sh
+          dest: /home/ansible/st.sh
+
+    - name: Execute the script
+      command: sh /home/ansible/st.sh
