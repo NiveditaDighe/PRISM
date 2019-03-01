@@ -1,0 +1,8 @@
+- hosts: Web
+  tasks:
+    - copy:
+          src:  /home/ansible/git_repo/jenkins_install.sh
+          dest: /home/ansible/jenkins_install.sh
+
+    - name: Execute the script
+      command: sh /home/ansible/jenkins_install.sh
