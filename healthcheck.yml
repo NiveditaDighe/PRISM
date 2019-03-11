@@ -4,5 +4,5 @@
           src: /home/ansible/scripts/healthcheck.sh
           dest: /home/ansible/healthcheck.sh
 
-    - name: Execute the script
+    - name: Execute the script to generate healthcheck of all ubuntu ansible servers
       command: sh /home/ansible/healthcheck.sh
