@@ -1,6 +1,6 @@
 - hosts: Web
   tasks:
-  - name: create a login user
+  - name: create a login user on all Ansible nodes
     user:
         name: nive1
         createhome: yes
