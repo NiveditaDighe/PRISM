@@ -1,9 +1,0 @@
-- hosts: Web
-  tasks:
-  - name: create a login user on all Ansible nodes
-    user:
-        name: sarang1
-        createhome: yes
-        state: present
-        shell: /bin/bash       # Defaults to /bin/bash
-        system: no             # Defaults to no
