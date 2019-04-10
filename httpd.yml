@@ -1,5 +1,5 @@
 - hosts: Web
   tasks:
-   - name: Install httpd 
+   - name: Install httpd on ansible 
      apt: pkg=httpd  state=latest update_cache=true
      notify:
