@@ -2,7 +2,7 @@
   tasks:
   - name: create a login user on all Ansible nodes
     user:
-        name: sarang1
+        name: tactprd
         createhome: yes
         state: present
         shell: /bin/bash       # Defaults to /bin/bash
