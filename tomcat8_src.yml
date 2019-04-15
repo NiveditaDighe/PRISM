@@ -1,4 +1,4 @@
 - hosts: Web
   tasks:
-  - name: ensure tomcat8 is running (and enable it at boot)
+  - name: ensure tomcat8 is running 
     service: name=tomcat8 state=started enabled=yes
